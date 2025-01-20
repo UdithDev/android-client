@@ -91,7 +91,10 @@ const ImportAudio: React.FC = () => {
             buttonStyle={styles.cleanButton}
           />
         </View>
-        <Text style={styles.playAudio}>Play Audio</Text>
+
+        <View style={styles.playAudio}>
+          <Text>Play Audio</Text>
+        </View>
       </View>
     </SafeAreaView>
   );
@@ -209,6 +212,12 @@ const styles = StyleSheet.create({
   },
   cleanButton: {
     width: "100%",
+  },
+
+  playAudio: {
+    marginTop: 25,
+    width: "100%",
+    alignItems: "center",
   },
 });
 
