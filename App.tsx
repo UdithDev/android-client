@@ -4,5 +4,5 @@ import ImportAudioScreen from "./src/screens/ImoportAudioScreen";
 import RecordAudioScreen from "./src/screens/RecordAudioScreen";
 
 export default function App() {
-  return <RecordAudioScreen />;
+  return <AudioScreen/>;
 }

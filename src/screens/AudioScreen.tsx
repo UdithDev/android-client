@@ -5,7 +5,7 @@ import { AudioToolsButtons } from "../components/audio";
 const AudioScreen: React.FC = () => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <AudioToolsButtons />
+      <AudioToolsButtons/>
     </SafeAreaView>
   );
 };
