@@ -8,8 +8,8 @@ import {
   SafeAreaView,
 } from "react-native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import { Music, Mic, Navigation } from "lucide-react-native";
-import { types } from "@babel/core";
+import { Music, Mic } from "lucide-react-native";
+import { RootStackParamList } from "../../navigation/types";
 
 interface ButtonProps {
   icon: React.ReactNode;
@@ -25,22 +25,22 @@ const AudioButton: React.FC<ButtonProps> = ({ icon, label, onPress }) => (
 );
 
 type AudioToolsButtonProps = {
-  // navigation: NativeStackNavigationProp<RootStackParamList, "Home">;
+  navigation: NativeStackNavigationProp<RootStackParamList, "Home">;
 };
 
-const AudioToolsButtons: React.FC<AudioToolsButtonProps> = ({  }) => {
+const AudioToolsButtons: React.FC<AudioToolsButtonProps> = ({navigation}) => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.buttonGrid}>
         <AudioButton
           icon={<Music size={24} color="#B0B0B5" />}
           label="Import Audio"
-          onPress={() => console.log("Import Pressed")}
+          onPress={() => navigation.navigate('ImportAudio')}
         />
         <AudioButton
           icon={<Mic size={24} color="#B0B0B5" />}
           label="Record"
-          onPress={() => console.log("Record pressed")}
+          onPress={() =>navigation.navigate('RecordAudio')}
         />
       </View>
     </SafeAreaView>
